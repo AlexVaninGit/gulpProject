@@ -6,6 +6,16 @@
 - gulpproject
     - app
         - common
+            - fonts
+            - images
+            - scripts
+            - styles
         - components
         - layouts
         - pages
+    - dist
+        - assets
+            - images
+            - scripts
+            - styles
+            - fonts
