@@ -5,7 +5,7 @@
 ## Структура папок
 - gulpproject
     - app
-        -common
-        -components
-        -layouts
-        -pages
+        - common
+        - components
+        - layouts
+        - pages
