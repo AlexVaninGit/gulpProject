@@ -1,0 +1,11 @@
+include ../logo/logo
+include ../search/search
+include ../icon-btn/icon-btn
+
+mixin header()
+    header.header
+        +logo('assets/images/logo.png')
+        +search()
+        header.header__btns
+            +icon-btn('./assets/images/heart.png', 10)
+            +icon-btn('./assets/images/basket.png', 2)

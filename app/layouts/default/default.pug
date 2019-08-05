@@ -1,0 +1,15 @@
+include ../../components/header/header
+include ../../components/footer/footer
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        title AERO - Мебель
+        link(href='assets/styles/app.css' rel='stylesheet')
+    body
+        main.main
+            +header()
+            block content
+            +footer()
+            script(src='assets/scripts/app.min.js')

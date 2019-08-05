@@ -48,7 +48,7 @@ gulp.task('templates', ()=>{
 
 
 gulp.task('styles', ()=>{
-   return gulp.src(`${PATHS.app}/common/styles/**/*.scss`, {since: gulp.lastRun("styles")})
+   return gulp.src(`${PATHS.app}/common/styles/app.scss`, {since: gulp.lastRun("styles")})
    .pipe(plumber())
    .pipe(gulpif(!isProduction, sourcemaps.init()))  
    .pipe(sass())
@@ -73,6 +73,7 @@ gulp.task('styles', ()=>{
  gulp.task('copy', ()=>{
    return gulp
    .src(`${PATHS.app}/common/fonts/**/*`, { since: gulp.lastRun("copy") })
+   .pipe(plumber())
    .pipe(gulp.dest(`${PATHS.dist}/assets/fonts`)) 
  });
 
