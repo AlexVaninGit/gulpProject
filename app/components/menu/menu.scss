@@ -32,6 +32,7 @@
         background-color: #fff;
         z-index: 8;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
         display: none;
         
         &__item{
@@ -57,7 +58,9 @@
 
     &__item:not(:last-child):hover > &-sub{
         display: block;
-        left: -50%;
+        // left: -50%;
+        left: 50%;
+        margin-left: -100px;
         top: 155%;
     }
 
@@ -70,6 +73,7 @@
     &__item:first-child:hover > &-sub{
         display: block;
         left: 0;
+        margin: 0;
         top: 155%;
     }
 
