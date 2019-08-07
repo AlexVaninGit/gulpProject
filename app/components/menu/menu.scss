@@ -16,16 +16,12 @@
         color: color('gray-darkest');
         font-weight: bold;
         padding-bottom: 15px;
-        // display: block;
-        // height: 100%;
-
+        transition: all .5s;
     }
     &-sub{
         box-sizing: border-box;
         min-width: 200px;
         position: absolute;
-        // left: 0;
-        // top: 150%;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -33,8 +29,9 @@
         z-index: 8;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
         border-radius: 2px;
-        display: none;
-        
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s ease;
         &__item{
             padding: 20px;
             padding-bottom: 0;
@@ -46,6 +43,7 @@
             text-decoration: none;
             font-size: 16px;
             color: color('gray-darker');
+            transition: all .5s;
         }
         &__link:hover, &__link:focus{
             color: color('blue');
@@ -57,21 +55,23 @@
     }
 
     &__item:not(:last-child):hover > &-sub{
-        display: block;
-        // left: -50%;
+        opacity: 1;
+        visibility: visible;
         left: 50%;
         margin-left: -100px;
         top: 155%;
     }
 
     &__item:last-child:hover > &-sub{
-        display: block;
+        opacity: 1;
+        visibility: visible;
         right: 0;
         top: 155%;
     }
 
     &__item:first-child:hover > &-sub{
-        display: block;
+        opacity: 1;
+        visibility: visible;
         left: 0;
         margin: 0;
         top: 155%;
