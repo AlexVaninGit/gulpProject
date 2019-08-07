@@ -1,0 +1,27 @@
+mixin menu()
+    - 
+        let menu = [
+            {url: "#", text: "Мебель"},
+            {url: "#", text: "Хранение"},
+            {url: "#", text: "Спальня"},
+            {url: "#", text: "Кухня"},
+            {url: "#", text: "Аксессуары"},
+            {url: "#", text: "Акции"}
+        ]
+    -
+        let subMenu = [
+            {url: "#", text: "Мягкая мебель"},
+            {url: "#", text: "Столы"},
+            {url: "#", text: "Стулья"},
+            {url: "#", text: "Стеллажи"},
+            {url: "#", text: "Шкафы-купе"}     
+        ]
+    
+    ul.nav-menu
+        each element in menu
+            li.nav-menu__item
+                a(href=element.url class="nav-menu__link") #{element.text}
+                ul.nav-menu-sub
+                    each el in subMenu
+                        li.nav-menu-sub__item
+                            a(href=el.url class="nav-menu-sub__link") #{el.text}

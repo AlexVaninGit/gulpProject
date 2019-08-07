@@ -1,11 +1,17 @@
 include ../logo/logo
 include ../search/search
 include ../icon-btn/icon-btn
+include ../menu/menu
 
 mixin header()
     header.header
-        +logo('assets/images/logo.png')
-        +search()
-        header.header__btns
-            +icon-btn('./assets/images/heart.png', 10)
-            +icon-btn('./assets/images/basket.png', 2)
+        .container
+            .header__content
+                +logo('assets/images/logo.svg')
+                +search()
+                header.header__btns
+                    +icon-btn('./assets/images/favourites.svg', 10)
+                    +icon-btn('./assets/images/cart.svg', 2)
+        nav.nav
+            .container
+                +menu()      

@@ -1,0 +1,23 @@
+.icon-btn{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    &__icon{
+        margin-right: 8px;
+
+    }
+
+    &__count{
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        background-color: color('gray-lighter');
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}

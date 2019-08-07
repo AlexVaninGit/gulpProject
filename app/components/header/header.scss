@@ -1,0 +1,26 @@
+.header{
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    padding-top: 45px;
+    &__btns{
+        display: flex;
+
+        .icon-btn{
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+
+    .nav{
+        border-top: 1px solid color('gray-light');
+        border-bottom: 1px solid color('gray-light');
+        margin-top: 45px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

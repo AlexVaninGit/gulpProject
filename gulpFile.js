@@ -39,7 +39,7 @@ gulp.task('clear', ()=>{
 
 
 gulp.task('templates', ()=>{
-    return gulp.src(`${PATHS.app}/pages/*.pug`, { since: gulp.lastRun("templates")})
+    return gulp.src(`${PATHS.app}/pages/*.pug`, /*{ since: gulp.lastRun("templates")}*/)
     .pipe(plumber())
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest(PATHS.dist))
@@ -48,7 +48,7 @@ gulp.task('templates', ()=>{
 
 
 gulp.task('styles', ()=>{
-   return gulp.src(`${PATHS.app}/common/styles/app.scss`, {since: gulp.lastRun("styles")})
+   return gulp.src(`${PATHS.app}/common/styles/app.scss`, /*{since: gulp.lastRun("styles")}*/)
    .pipe(plumber())
    .pipe(gulpif(!isProduction, sourcemaps.init()))  
    .pipe(sass())
@@ -63,7 +63,7 @@ gulp.task('styles', ()=>{
 
 
  gulp.task('images', ()=>{
-   return gulp.src(`${PATHS.app}/common/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`, {since: gulp.lastRun("images")})
+   return gulp.src(`${PATHS.app}/common/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`, /*{since: gulp.lastRun("images")}*/)
    .pipe(plumber())
    .pipe(gulpif(isProduction, imagemin()))
    .pipe(gulp.dest(`${PATHS.dist}/assets/images`))
