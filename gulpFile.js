@@ -27,6 +27,12 @@ const pug = require('gulp-pug');
 const browserSync = require("browser-sync").create();
 
 
+//svg-sprite
+const svgSprite = require("gulp-svg-sprite");
+const svgmin = require("gulp-svgmin");
+
+
+
 const PATHS = {
     app: "./app",
     dist: "./dist"
@@ -93,6 +99,38 @@ gulp.task('styles', ()=>{
 		.pipe(gulpWebpack(webpackConfig, webpack))
 		.pipe(gulp.dest(`${PATHS.dist}/assets/scripts`));
 });
+
+
+gulp.task("icons", () => {
+   return gulp
+     .src(`${PATHS.app}/common/icons/**/*.svg`)
+     .pipe(plumber())
+     .pipe(svgmin({
+       js2svg: {
+         pretty: true
+       }
+     }))
+     .pipe(
+       svgSprite({
+         mode: {
+           symbol: {
+             sprite: "../dist/assets/images/icons/sprite.svg",
+             render: {
+               scss: {
+                 dest:'../app/common/styles/helpers/sprites.scss',
+                 template: './app/common/styles/helpers/sprite-template.scss'
+               }
+             }
+           }
+         }
+       })
+     )
+     .pipe(gulp.dest('./'));
+ });
+
+
+
+
 gulp.task('watch', ()=>{
    gulp.watch(`${PATHS.app}/**/*.pug`, gulp.series("templates"));
    gulp.watch(`${PATHS.app}/**/*.scss`, gulp.series("styles"));
@@ -102,7 +140,7 @@ gulp.task('watch', ()=>{
 });
 gulp.task("default",
    gulp.series(        
-      gulp.parallel("templates", "styles", "scripts", "images", "copy"),        
+      gulp.parallel("templates", "icons", "styles", "scripts", "images", "copy"),        
       gulp.parallel("watch", "server")    
    ) 
 );
@@ -111,7 +149,7 @@ gulp.task(
    "production",    
    gulp.series(        
       "clear",        
-      gulp.parallel("templates", "styles", "scripts", "images", "copy")    
+      gulp.parallel("templates", "icons", "styles", "scripts", "images", "copy")    
       ) 
 );
 
