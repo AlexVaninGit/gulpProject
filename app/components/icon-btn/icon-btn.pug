@@ -1,5 +1,7 @@
-mixin icon-btn(src, count)
+mixin icon-btn(name, count)
+    include ../../common/templates/mixins/mixins
     button.icon-btn
-        img(src=src, alt="" class="icon-btn__icon")
+        .icon-btn__icon
+            +icon(name)
         span.icon-btn__count= count
 

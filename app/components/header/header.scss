@@ -1,4 +1,8 @@
 .header{
+
+    svg g{
+        fill: black !important;
+    }
     &__content{
         display: flex;
         align-items: center;

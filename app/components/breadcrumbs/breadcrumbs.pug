@@ -1,0 +1,12 @@
+mixin breadcrumbs(arr)
+    .breadcrumbs
+        ul.breadcrumbs__list
+            if arr
+                each item, index  in arr
+                    if index === arr.length - 1
+                        li.breadcrumbs__item
+                            span.breadcrumbs__last= item.value
+                    else
+                        li.breadcrumbs__item
+                            a.link(href=item.url title=item.title)= item.value
+                            span.breadcrumbs__separator /

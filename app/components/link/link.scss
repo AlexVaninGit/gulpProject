@@ -1,0 +1,10 @@
+.link {
+    color: color("gray-darkest");
+    text-decoration: none;
+
+    &:hover {
+        color: color("blue");
+        // transition: color $animation-time;
+        transition: color .5s;
+    }
+}

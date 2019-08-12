@@ -1,0 +1,16 @@
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__separator {
+        margin: 0 10px;
+    }
+
+    &__last {
+        color: color("gray-dark");
+    }
+}

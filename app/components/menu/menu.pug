@@ -20,8 +20,8 @@ mixin menu()
     ul.nav-menu
         each element in menu
             li.nav-menu__item
-                a(href=element.url class="nav-menu__link") #{element.text}
+                a(href=element.url class="nav-menu__link link") #{element.text}
                 ul.nav-menu-sub
                     each el in subMenu
                         li.nav-menu-sub__item
-                            a(href=el.url class="nav-menu-sub__link") #{el.text}
+                            a(href=el.url class="nav-menu-sub__link link") #{el.text}

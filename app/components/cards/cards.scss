@@ -1,0 +1,38 @@
+.cards{
+    
+    &__link{
+        display: block;
+    }
+
+    &__img{
+        text-align: center;
+    }
+
+    &__title{
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    &-flex{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        padding-top: 0;
+    }
+    &-button__item{
+        background-color: #fff;
+        border: none;
+    }
+    &__item:hover{
+        border-radius: 2px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+        transition: all .5s;
+    }
+
+    .cddd{
+        fill: red !important;
+    }
+    
+
+}

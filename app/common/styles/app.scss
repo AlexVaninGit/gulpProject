@@ -5,6 +5,7 @@
 @import 'variables/colors';
 @import 'variables/measures';
 @import 'variables/typography';
+@import "variables/grid";
 
 // // Core styles
 @import 'core/fonts';
@@ -13,14 +14,19 @@
 
 //helpers
 @import 'helpers/sprites';
-
+@import "helpers/bootstrap";
 
 // Pages
 
 // Components
+@import '../../components/link/link';
 @import '../../components/header/header';
 @import '../../components/footer/footer';
 @import '../../components/logo/logo';
 @import '../../components/search/search';
 @import '../../components/icon-btn/icon-btn';
 @import '../../components/menu/menu';
+@import "../../components/breadcrumbs/breadcrumbs";
+@import '../../components/page-title/page-title';
+@import '../../components/cards/cards';
+@import '../../components/btn/btn'

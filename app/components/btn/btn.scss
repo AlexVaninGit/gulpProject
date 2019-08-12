@@ -1,0 +1,16 @@
+.button{
+    border: none;
+    font-family: $font-family-base;
+    color: color('white');
+    background-color: color('blue');
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 13px 85px;
+    font-size: 14px;
+    
+    &:hover{
+        background-color: color('dark-blue');
+        cursor: pointer;
+        transition: background-color .5s;
+    }
+}

@@ -1,0 +1,19 @@
+mixin cards(arr)
+    include ../../common/templates/mixins/mixins
+    .cards
+        .row
+            if arr
+                each item in arr
+                        .col-xl-8
+                            .cards__item.mr-xl-4.mb-xl-4
+                                a.cards(href=item.url)
+                                    img.cards__img(src=item.urlImg, alt="товар")
+                                a(href="#" class="cards__title link")= item.title
+                                .cards-flex
+                                    .cards__price=item.price
+                                    .cards-button
+                                        button.cards-button__item 
+                                            +icon('favourites')
+                                        button.cards-button__item
+                                            +icon('cart')
+                                               

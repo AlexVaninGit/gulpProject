@@ -3,3 +3,12 @@ $font-family-base: 'Noto Sans', sans-serif !default;
 $font-size-base: 16px !default;
 
 $font-size-h1: 40px !default;
+$line-height-h1: 1 !default;
+
+$line-height-base: 1.5 !default;
+
+$typography-margin-top: map-get($spacers, 0) !default;
+$typography-margin-bottom: map-get($spacers, 6) !default;
+
+$headings-font-weight: bold;
+$headings-color: color("grey-darkest");
