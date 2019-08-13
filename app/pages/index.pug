@@ -6,6 +6,7 @@ include ../components/breadcrumbs/breadcrumbs
 include ../components/page-title/page-title
 include ../components/cards/cards
 include ../components/btn/btn
+include ../components/input-checkbox/input-checkbox
 
 //- Выводим контент
 block content
@@ -23,6 +24,7 @@ block content
         .mt-xl-16
             .row
                 .col-xl-5
+                    +input-checkbox('name', 'Вельвет')
                     +btn('Применить')
                 .col-xl-18.offset-xl-1
                     -
