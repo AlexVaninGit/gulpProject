@@ -1,5 +1,5 @@
 mixin cards(arr)
-    include ../../common/templates/mixins/mixins
+    //- include ../../common/templates/mixins/mixins
     .cards
         .row
             if arr
@@ -12,8 +12,8 @@ mixin cards(arr)
                                 .cards-flex
                                     .cards__price=item.price
                                     .cards-button
-                                        button.cards-button__item 
-                                            +icon('favourites')
-                                        button.cards-button__item
-                                            +icon('cart')
+                                        .cards-button__item 
+                                            +icon-btn('favourites')
+                                        .cards-button__item
+                                            +icon-btn('cart')
                                                

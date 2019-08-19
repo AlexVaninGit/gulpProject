@@ -1,8 +1,12 @@
 .input-checkbox {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 20px;
     cursor: pointer;
-
+    &:last-child{
+        margin-bottom: 40px;
+    }
     &__label {
         position: relative;
         padding: 0 0 0 35px;

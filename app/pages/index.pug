@@ -7,6 +7,8 @@ include ../components/page-title/page-title
 include ../components/cards/cards
 include ../components/btn/btn
 include ../components/input-checkbox/input-checkbox
+include ../components/colors-filter/colors-filter
+include ../components/filter-title/filter-title
 
 //- Выводим контент
 block content
@@ -24,8 +26,35 @@ block content
         .mt-xl-16
             .row
                 .col-xl-5
-                    +input-checkbox('name', 'Вельвет')
-                    +btn('Применить')
+                    -
+                        var filter_material = [
+                            {inputName: 'Velvet', title: 'Вельвет'},
+                            {inputName: 'Mikrovelur', title: 'Микровелюр'},
+                            {inputName: 'Velur', title: 'Велюр'},
+                            {inputName: 'Zakkard', title: 'Жаккард'},
+                            {inputName: 'Zam', title: 'Замша'},
+                            {inputName: 'Rog', title: 'Рогожка'}
+                        ]
+                    -
+                        var filter_corner = [
+                            {inputName: 'left', title: 'Левый'},
+                            {inputName: 'right', title: 'Правый'},
+                            {inputName: 'universal', title: 'Универсальный'}
+                        ]
+                    form.filter(action="#")
+                        .filter__item
+                            +filter-title('Цвет')
+                            +colors-filter('test')
+                        .filter__item
+                            +filter-title('Материал')
+                            each filter_element in filter_material
+                                +input-checkbox(filter_element.inputName, filter_element.title)
+                        .filter__item
+                            +filter-title('Угол')
+                            each filter_element in filter_corner
+                                +input-checkbox(filter_element.inputName, filter_element.title)
+                        +btn('Применить')
+                        input.button.button_white.mt-xl-4(type="submit" value="Очистить фильтр")
                 .col-xl-18.offset-xl-1
                     -
                         var cards = [

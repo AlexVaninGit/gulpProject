@@ -1,7 +1,13 @@
 mixin icon-btn(name, count)
     include ../../common/templates/mixins/mixins
-    button.icon-btn
-        .icon-btn__icon
+
+    button.icon-btn(class=count ? '' : 'icon-btn_only-icon')
+        span.icon-btn__icon
             +icon(name)
-        span.icon-btn__count= count
+        if count
+            span.icon-btn__count= count
+    //- button.icon-btn
+    //-     .icon-btn__icon
+    //-         +icon(name)
+    //-     span.icon-btn__count= count
 

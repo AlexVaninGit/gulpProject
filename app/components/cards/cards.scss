@@ -20,9 +20,26 @@
         padding: 20px;
         padding-top: 0;
     }
+    &-button{
+        display: flex;
+    }
     &-button__item{
         background-color: #fff;
         border: none;
+        margin-left: 20px;
+        .icon-cart{
+            fill: color('blue');
+            &:hover{
+                fill: color('dark-blue');
+            }
+        }
+        .icon-favourites{
+            fill: color('blue');
+            &:hover{
+                fill: color('dark-blue');
+            }
+        }
+
     }
     &__item:hover{
         border-radius: 2px;

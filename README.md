@@ -7,11 +7,32 @@
     - app
         - common
             - fonts
+            - iocns
             - images
             - scripts
             - styles
+                - core
+                - helpers
+                - variables
+            - temlates
         - components
+            - breadcrumbs
+            - btn
+            - cards
+            - colors-filter
+            - filter-title
+            - footer
+            - footer-link
+            - header
+            - icon-btn
+            - input-checkbox
+            - link
+            - logo
+            - menu
+            - page-title
+            -saerch
         - layouts
+            - dafault
         - pages
     - dist
         - assets

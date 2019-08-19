@@ -1,0 +1,9 @@
+.footer-link__item{
+    padding: 4px 15px;
+    background-color: color('white');
+    margin-right: 5px;
+    border-radius: 2px;
+    &:last-child{
+        margin-right: 0;
+    }
+}

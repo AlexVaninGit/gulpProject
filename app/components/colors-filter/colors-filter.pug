@@ -1,0 +1,26 @@
+mixin colors-filter(name)
+    -
+        let colorsBg = [
+            {styleBgWhite: "background-color: #ffffff;"},
+            {styleBg: "background-color: #000000;"},
+            {styleBg: "background-color: #5a5a5a;"},
+            {styleBg: "background-color: #704d35;"},
+            {styleBg: "background-color: #e0791d;"},
+            {styleBg: "background-color: #ba0606;"},
+            {styleBg: "background-color: #38a01a;"},
+            {styleBg: "background-color: #314976;"},
+            {styleBg: "background-color: #3748a6;"}
+        ]
+    .color-checkbox
+        each element in colorsBg
+            if(element.styleBgWhite)
+                label.color-checkbox__label
+                    input.color-checkbox__input.color-checkbox_white(type='checkbox' name=name style=element.styleBgWhite)
+                    .color-checkbox__label_checked
+                        //- +icon-btn('check')
+                        +icon('check')
+            else
+                label.color-checkbox__label
+                    input.color-checkbox__input(type='checkbox' name=name style=element.styleBg)
+                    .color-checkbox__label_checked
+                        +icon('check')

@@ -1,2 +1,29 @@
+include ../footer-link/footer-link
+
 mixin footer()
-    footer.footer Footer content
+    footer.footer
+        .container
+            .row
+                .col-xl-14
+                    -
+                        var footer_link = [
+                            {url: "#", title: "Каталог"},
+                            {url: "#", title: "Оплата"},
+                            {url: "#", title: "Доставка"},
+                            {url: "#", title: "Возврат"},
+                            {url: "#", title: "Сборка"},
+                            {url: "#", title: "Помощь"},
+                            {url: "#", title: "Обратная связь"}
+                        ]
+                    .footer-link
+                        each link in footer_link
+                            +footer-link(link.url, link.title)
+                    .footer__copy
+                        |&copy; 2019, Интернет-магазин мебели
+                .col-xl-6.offset-xl-4
+                    .footer-contact
+                        .footer-contact__title
+                            |По любым вопросам обращайтесь:
+                        .footer-contact__number
+                            |+7 499 242-12-54
+

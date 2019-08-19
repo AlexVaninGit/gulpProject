@@ -1,0 +1,49 @@
+.color-checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    cursor: pointer;
+    &__label{
+        position: relative;
+        &_checked{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-54%, -73%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .5s, visibility .5s, transform .5s;
+            .icon-check{
+                fill: #fff;
+            }
+        }
+    }
+    &__input{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:checked{
+            +.color-checkbox__label_checked{
+                opacity: 1;
+                visibility: visible;
+                &:hover{
+                    .icon-check{
+                        opacity: 0.5;
+                        transition: opacity .5s;
+                    }
+                }
+            }
+            transition: all .5s;
+        }
+    }
+    &_white{
+        border: solid 1px #9b9b9b;
+        &+.color-checkbox__label_checked{
+            .icon-check{
+                fill: #0566ff;
+            }
+        }
+    }
+
+}
