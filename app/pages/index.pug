@@ -13,7 +13,7 @@ include ../components/filter-title/filter-title
 //- Выводим контент
 block content
     .container
-        .mt-xl-12.mb-xl-3
+        .mt-xl-12.mb-xl-3.mt-md-12.mb-md-3
             -
                 var breadcrumbs = [
                     {url: '#', title: 'Главная', value: 'Главная'},
@@ -23,9 +23,9 @@ block content
                 ]
             +breadcrumbs(breadcrumbs)
         +page-title('Диваны')
-        .mt-xl-16
+        .mt-xl-16.mt-md-16
             .row
-                .col-xl-5
+                .col-xl-5.col-md-8
                     -
                         var filter_material = [
                             {inputName: 'Velvet', title: 'Вельвет'},
@@ -53,9 +53,9 @@ block content
                             +filter-title('Угол')
                             each filter_element in filter_corner
                                 +input-checkbox(filter_element.inputName, filter_element.title)
-                        input.button.mt-xl-4(type="submit" value="Применить")
-                        input.button.button_white.mt-xl-4(type="reset" value="Очистить фильтр")
-                .col-xl-18.offset-xl-1
+                        input.button.mt-xl-4.mt-md-4(type="submit" value="Применить")
+                        input.button.button_white.mt-xl-4.mt-md-4(type="reset" value="Очистить фильтр")
+                .col-xl-18.offset-xl-1.col-md-16
                     -
                         var cards = [
                             {url: '#', urlImg:'assets/images/item-04.jpg', title: 'Montreal', price: '10 990 руб.'},

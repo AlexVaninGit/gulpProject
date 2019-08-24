@@ -7,12 +7,12 @@ mixin header()
     header.header
         .header__top
             .container
-                .row.align-items-lg-center
-                    .col-xl-4
+                .row.align-items-xxs-center
+                    .col-xl-4.col-md-6
                         +logo('assets/images/logo.svg')
-                    .col-xl-13.offset-xl-2
+                    .col-xl-13.offset-xl-2.col-md-12
                         +search()
-                    .col-xl-3.offset-xl-2
+                    .col-xl-3.offset-xl-2.col-md-6
                         header.header__btns
                             +icon-btn('favourites', 10)
                             +icon-btn('cart', 2)

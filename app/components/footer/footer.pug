@@ -4,7 +4,7 @@ mixin footer()
     footer.footer
         .container
             .row
-                .col-xl-14
+                .col-xl-14.col-md-13
                     -
                         var footer_link = [
                             {url: "#", title: "Каталог"},
@@ -21,7 +21,7 @@ mixin footer()
                                 +footer-link(link.url, link.title)
                     .footer__copy
                         |&copy; 2019, Интернет-магазин мебели
-                .col-xl-6.offset-xl-4
+                .col-xl-6.offset-xl-4.col-md-8.offset-md-3
                     .footer-contact
                         .footer-contact__title
                             |По любым вопросам обращайтесь:
