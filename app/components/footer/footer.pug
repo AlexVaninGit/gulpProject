@@ -15,15 +15,15 @@ mixin footer()
                             {url: "#", title: "Помощь"},
                             {url: "#", title: "Обратная связь"}
                         ]
-                    .footer-link
-                        each link in footer_link
-                            +footer-link(link.url, link.title)
+                    nav.footer-link__nav
+                        ul.footer-link__ul
+                            each link in footer_link
+                                +footer-link(link.url, link.title)
                     .footer__copy
                         |&copy; 2019, Интернет-магазин мебели
                 .col-xl-6.offset-xl-4
                     .footer-contact
                         .footer-contact__title
                             |По любым вопросам обращайтесь:
-                        .footer-contact__number
-                            |+7 499 242-12-54
+                        a.footer-contact__number.link(href="tel:+74992421254") +7 499 242-12-54
 

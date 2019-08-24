@@ -8,13 +8,22 @@
         .icon-filterCat{
             transition: fill .5s;
         }
-        .icon-filterCat:hover{
-            fill: color('blue');
-            transition: fill .5s;
-        }
+        // .icon-filterCat:hover{
+        //     fill: color('blue');
+        //     transition: fill .5s;
+        // }
     }
     &__text{
         font-weight: bold;
+    }
+
+    &:hover{
+        cursor: pointer;
+        .icon-filterCat{
+            fill: color('blue');
+            transition: fill .5s;
+            cursor: pointer;
+        }
     }
 
 }

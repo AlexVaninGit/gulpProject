@@ -53,8 +53,8 @@ block content
                             +filter-title('Угол')
                             each filter_element in filter_corner
                                 +input-checkbox(filter_element.inputName, filter_element.title)
-                        +btn('Применить')
-                        input.button.button_white.mt-xl-4(type="submit" value="Очистить фильтр")
+                        input.button.mt-xl-4(type="submit" value="Применить")
+                        input.button.button_white.mt-xl-4(type="reset" value="Очистить фильтр")
                 .col-xl-18.offset-xl-1
                     -
                         var cards = [

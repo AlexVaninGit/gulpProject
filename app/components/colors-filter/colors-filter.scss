@@ -1,18 +1,23 @@
 .color-checkbox{
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
     cursor: pointer;
     &__label{
+        display: inline-flex;
         position: relative;
+        margin-right: 10px;
+        margin-bottom: 10px;
         &_checked{
             position: absolute;
+            display: inline-flex;
             top: 50%;
             left: 50%;
-            transform: translate(-54%, -73%);
+            transform: translate(-50%, -50%);
             opacity: 0;
             visibility: hidden;
             transition: opacity .5s, visibility .5s, transform .5s;
+            cursor: pointer;
             .icon-check{
                 fill: #fff;
             }
@@ -22,6 +27,8 @@
         width: 36px;
         height: 36px;
         border-radius: 50%;
+        margin: 0;
+        padding: 0;
         cursor: pointer;
         &:checked{
             +.color-checkbox__label_checked{
@@ -39,6 +46,7 @@
     }
     &_white{
         border: solid 1px #9b9b9b;
+        margin-right: 0;
         &+.color-checkbox__label_checked{
             .icon-check{
                 fill: #0566ff;
