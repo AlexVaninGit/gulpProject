@@ -44,15 +44,18 @@ block content
                     form.filter(action="#")
                         .filter__item
                             +filter-title('Цвет')
-                            +colors-filter('test')
+                            .filter__items
+                                +colors-filter('test')
                         .filter__item
                             +filter-title('Материал')
-                            each filter_element in filter_material
-                                +input-checkbox(filter_element.inputName, filter_element.title)
+                            .filter__items
+                                each filter_element in filter_material
+                                    +input-checkbox(filter_element.inputName, filter_element.title)
                         .filter__item
                             +filter-title('Угол')
-                            each filter_element in filter_corner
-                                +input-checkbox(filter_element.inputName, filter_element.title)
+                            .filter__items
+                                each filter_element in filter_corner
+                                    +input-checkbox(filter_element.inputName, filter_element.title)
                         input.button.mt-xl-4.mt-md-4(type="submit" value="Применить")
                         input.button.button_white.mt-xl-4.mt-md-4(type="reset" value="Очистить фильтр")
                 .col-xl-18.offset-xl-1.col-md-16

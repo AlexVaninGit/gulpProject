@@ -6,7 +6,7 @@
         display: flex;
         align-items: center;
         .icon-filterCat{
-            transition: fill .5s;
+            transition: all .5s;
         }
     }
     &__text{
@@ -22,4 +22,17 @@
         }
     }
 
+}
+.filter-title.is-active + .filter__items{
+    display: none;
+
+}
+.filter-title.is-active{
+    .icon-filterCat{
+        transform: rotate(-180deg);
+        transition: transform .5s;
+    }
+}
+.filter__items{
+    display: block;
 }
