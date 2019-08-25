@@ -14,6 +14,5 @@ const toggleClass = (el, className) => {
 for (let elem of filterTrigger) {
     elem.addEventListener('click', (e) => {
       toggleClass(e.currentTarget, classes.isActive)
-      filterCat.style.transform = "rotate(45deg)"
     })
   }
