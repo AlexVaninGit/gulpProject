@@ -1,2 +1,1 @@
-console.log("Hello");
-import '../../components/filter-title/filter'
+import '../../components/filter-title/filter-trigger'
